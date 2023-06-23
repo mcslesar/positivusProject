@@ -1,7 +1,111 @@
 @import "normalize.scss";
 @import "fonts.scss";
 @import "const.scss";
+@import "global.scss";
 
-body{
-    color:$grey
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,p{
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+picture {
+    display: block;
+}
+
+body {
+    font-family: "Space Grotesk";
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header {
+    padding-top: 60px;
+
+    &__logo {
+        margin-right: 10px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        color: #000;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.header__button {
+    padding: 20px 35px;
+    border: 1px solid $black;
+    border-radius: 14px;
+}
+
+.promo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #000;
+    background-image: image-set(
+        url("../images/Illustration.avif") type("image/avif") ,
+        url("../images/Illustration.webp") type("image/webp"),
+        url("../images/Illustration.png") type("image/png"),
+      );
+    background-repeat: no-repeat;
+    background-position: 82% 70% ;
+    &__container {
+        max-width: 531px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px
+    }
+
+    &__title {
+        
+        font-size: 60px;
+        font-weight: 500;
+    }
+    &__subtitle {
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 505px;
+    }
+    &__button{
+        padding: 20px 35px;
+        max-width: 265px;
+    }
 }
