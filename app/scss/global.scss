@@ -62,7 +62,8 @@ body {
     background-color: $green;
     font-size: 40px;
     font-weight: 500;
-    display: inline-block;
+    display: inline;
+    border-radius: 7px;
 }
 .green-title{
     background-color:$green;
@@ -85,4 +86,15 @@ body {
     background-color: $grey;
 
 }
+
+
+.open .process__btn::after{
+    background-image:url(../images/minus-icon.svg);
+    transition: all 0.2s ease-out;
+}
+.open .process__text {
+    opacity: 1;
+    padding-top: 60px;
+}
+
 
