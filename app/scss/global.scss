@@ -6,9 +6,18 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+fieldset {
     margin: 0;
     padding: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+textarea {
+    resize: none;
 }
 
 ul {
@@ -33,12 +42,26 @@ picture {
     display: block;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: "Space Grotesk";
     font-size: 18px;
     color: #000;
+
 }
 
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    flex-grow: 1;
+}
 .container {
     max-width: 1270px;
     margin: 0 auto;
@@ -65,21 +88,26 @@ body {
     display: inline;
     border-radius: 7px;
 }
-.green-title{
-    background-color:$green;
+
+.green-title {
+    background-color: $green;
 }
-.white-title{
-    background-color:white;
+
+.white-title {
+    background-color: white;
 }
+
 .black-card {
     background-color: $black;
-    a{
+
+    a {
         color: white;
     }
 
 }
+
 .green-card {
-    background-color: $green; 
+    background-color: $green;
 }
 
 .grey-card {
@@ -88,13 +116,66 @@ body {
 }
 
 
-.open .process__btn::after{
-    background-image:url(../images/minus-icon.svg);
+.open .process__btn::after {
+    background-image: url(../images/minus-icon.svg);
     transition: all 0.2s ease-out;
 }
+
 .open .process__text {
     opacity: 1;
     padding-top: 60px;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
 
+.swiper-button-next:after,
+.swiper-container-rtl {
+    content: '';
+    position: absolute;
+    right: 400px;
+    bottom: -60px;
+    background-image: url(../images/arrow-right.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 25px;
+}
+
+.swiper-button-prev:after {
+    content: '';
+    position: absolute;
+    left: 400px;
+    bottom: -60px;
+    background-image: url(../images/arrow-left.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 25px;
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-prev:after {
+    content: '';
+}
+
+.swiper-button-prev {
+    float: left;
+    height: 100%;
+}
+
+.swiper-button-next {
+    float: right;
+    height: 100%;
+}
+
+.black-window {
+    padding-bottom: 68px;
+}
+
+.big_window {
+    padding: 18px 30px;
+    height: 190px;
+}

@@ -26,15 +26,35 @@ const teamLength = document.querySelectorAll('.team__item').length;
 let items = 6;
 
 showMore.addEventListener('click', () => {
-    items+=3;
+    items += 3;
     const massiv = Array.from(document.querySelector('.team__list').children);
-    const visItems = massiv.slice(0,items);
+    const visItems = massiv.slice(0, items);
 
     visItems.forEach(el => el.classList.add('is-visible'));
 
-    if(visItems.length === teamLength){
+    if (visItems.length === teamLength) {
         showMore.style.display = 'none';
     }
 
 
+});
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView: 2.1,
+    spaceBetween: 30,
+    centeredSlides: true,
+    initialSlide: 2,
+    centerInsufficientSlides:true,
+
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
 });
