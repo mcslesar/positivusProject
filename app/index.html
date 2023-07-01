@@ -47,7 +47,7 @@
 
 <main class="main">
     <section class="promo">
-        <div class="container ">
+        <div class="container image-container ">
             <div class="promo__container">
                 <h1 class="promo__title">Navigating the digital landscape for success</h1>
                 <p class="promo__subtitle">Our digital marketing agency helps businesses grow and succeed online through
@@ -621,21 +621,21 @@
 
     <div class="container footer__container">
 
-        <a href="#" class="footer__logo">
+        <div class="footer__box-list">
 
-            <picture>
+            <a href="#" class="footer__logo">
 
-                <source srcset="images/logo-icon-white.avif" type="image/avif">
+                <picture>
 
-                <source srcset="images/logo-icon-white.webp" type="image/webp">
+                    <source srcset="images/logo-icon-white.avif" type="image/avif">
 
-                <img src="images/logo-icon-white.png" alt="#">
+                    <source srcset="images/logo-icon-white.webp" type="image/webp">
 
-            </picture>
+                    <img src="images/logo-icon-white.png" alt="#">
 
-        </a>
+                </picture>
 
-        <nav class="footer__menu">
+            </a>
 
             <ul class="footer__list">
 
@@ -666,12 +666,6 @@
                 <li class="footer__item">
 
                     <a href="#" class="footer__link">Blog</a>
-
-                </li>
-
-                <li class="footer__item">
-
-                    <a href="#" class="footer__link footer__button">Request a quote</a>
 
                 </li>
 
@@ -727,55 +721,57 @@
 
             </ul>
 
-        </nav>
+            <div class="footer__contact">
 
-        <div class="footer__contact">
+                <h4 class="footer__contact-title">Contact us:</h4>
 
-            <h4 class="footer__contact-title">Contact us:</h4>
+                <ul class="footer__contact-list">
 
-            <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
 
-                <li class="footer__contact-item">
+                        <a href="mailto:vlad@htmlbook.ru" class="footer__contact-link">Email: info@positivus.com</a>
 
-                    <a href="mailto:vlad@htmlbook.ru" class="footer__contact-link">Email: info@positivus.com</a>
+                    </li>
 
-                </li>
+                    <li class="footer__contact-item">
 
-                <li class="footer__contact-item">
+                        <a href="tel:vlad@htmlbook.ru" class="footer__contact-link">Phone: 555-567-8901</a>
 
-                    <a href="tel:vlad@htmlbook.ru" class="footer__contact-link">Phone: 555-567-8901</a>
+                    </li>
 
-                </li>
+                    <li class="footer__contact-item">
 
-                <li class="footer__contact-item">
+                        <p class="footer__contact-adress">Address: 1234 Main St
 
-                    <p class="footer__contact-adress">Address: 1234 Main St
+                            Moonstone City, Stardust State 12345</p>
 
-                        Moonstone City, Stardust State 12345</p>
+                    </li>
 
-                </li>
+                </ul>
 
-            </ul>
+            </div>
+
+            <form class="footer__form" action="get">
+
+                <input type="text" placeholder="E-mail" class="footer__form-input">
+
+                <button class="footer__form-button">Subscribe to news</button>
+
+            </form>
 
         </div>
-
-        <form class="footer__form" action="get">
-
-            <input type="text" placeholder="E-mail" class="footer__input">
-
-            <button class="footer__button">Subscribe to news</button>
-
-        </form>
 
         <div class="footer__copyright">
 
             <p class="footer__copyright-text">© 2023 Positivus. All Rights Reserved.</p>
 
-            <p class="footer__copyright-text">Privacy Policy</p>
+            <a class="footer__copyright-link">Privacy Policy</a>
 
         </div>
 
     </div>
+
+
 
 </footer>
 
@@ -784,7 +780,5 @@
 <script src="js/main.min.js"></script>
 
 </body>
-
-
 
 </html>
