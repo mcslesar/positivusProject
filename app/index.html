@@ -20,7 +20,7 @@
                         <img src="images/logo-png" alt="#">
                     </picture>
                 </a>
-                <nav class="header__menu">
+                <nav class="header__menu" data-nav>
                     <ul class="header__list">
                         <li class="header__item">
                             <a href="#" class="header__link">About us</a>
@@ -42,19 +42,30 @@
                         </li>
                     </ul>
                 </nav>
+                <button class="header__burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
             </div>
         </header>
 
 <main class="main">
     <section class="promo">
-        <div class="container image-container ">
+        <div class="container ">
             <div class="promo__container">
                 <h1 class="promo__title">Navigating the digital landscape for success</h1>
-                <p class="promo__subtitle">Our digital marketing agency helps businesses grow and succeed online through
+                <picture>
+                    <source srcset="images/illustration.avif" type="image/avif">
+                    <source srcset="images/illustration.webp" type="image/webp">
+                    <img class="promo__illustration" src="images/illustration.png" alt="#">
+                </picture>
+                <p class="promo__subtitle">Our digital marketing agency helps businesses grow and succeed online
+                    through
                     a range of services including SEO, PPC, social media marketing, and content creation.</p>
                 <a href="#" class="promo__button button">Book a consultation</a>
+               
             </div>
-
             <ul class="promo__list">
                 <li class="promo__item">
                     <a href="" class="promo__link">
@@ -587,26 +598,26 @@
                         Say Hi
                     </label>
                     <label class="label-radio">
-                        <input class="contact__radio"  type="radio" name="hi">
+                        <input class="contact__radio" type="radio" name="hi">
                         <span class="radio__style"></span>
                         Get a Quote</label>
                 </fieldset>
-            
+
                 <fieldset class="contact-list-text">
                     <label class="label-text">
                         Name
-                        <input class="contact__text" placeholder="Name" type="text"  name="name">
+                        <input class="contact__text" placeholder="Name" type="text" name="name">
                     </label>
                     <label class="label-text">
                         Email*
-                        <input class="contact__text" type="text"  placeholder="E-Mail" name="email">
+                        <input class="contact__text" type="text" placeholder="E-Mail" name="email">
                     </label>
                     <label class="label-text">
                         Message*
-                        <textarea class="contact__text big_window" placeholder="Message" ></textarea>
+                        <textarea class="contact__text big_window" placeholder="Message"></textarea>
                     </label>
                 </fieldset>
-            <button class="contact__button button">Send Message</button>
+                <button class="contact__button button">Send Message</button>
             </form>
 
 

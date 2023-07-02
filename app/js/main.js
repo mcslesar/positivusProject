@@ -46,7 +46,7 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     centeredSlides: true,
     initialSlide: 2,
-    centerInsufficientSlides:true,
+    centerInsufficientSlides: true,
 
     simulateTouch: false,
     navigation: {
@@ -58,3 +58,20 @@ const swiper = new Swiper('.swiper', {
         type: 'bullets',
     },
 });
+
+const burger = document?.querySelector('[data-burger]');
+const nav = document?.querySelector('[data-nav]');
+const body = document.body;
+const navItems = nav?.querySelectorAll('a');
+burger?.addEventListener('click', () => {
+    body.classList.toggle('stop-scrole');
+    burger?.classList.toggle('burger--active');
+    nav.classList.toggle('header__menu--visible');
+})
+navItems.forEach(el => {
+    el.addEventListener('click', () => {
+        body.classList.remove('stop-scrole');
+        burger?.classList.remove('burger--active');
+        nav.classList.remove('header__menu--visible');
+    })
+})
