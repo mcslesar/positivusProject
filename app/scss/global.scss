@@ -61,7 +61,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.section__header{
+    display: flex;
+    gap:40px;
+}
 .main {
     flex-grow: 1;
 }
@@ -131,15 +134,14 @@ body {
 
 .section-title {
     color: #000;
-    background-color: $green;
     font-size: 40px;
     font-weight: 500;
-    display: inline;
     border-radius: 7px;
 }
 
 .green-title {
     background-color: $green;
+    border-radius: 7px;
 }
 
 .white-title {

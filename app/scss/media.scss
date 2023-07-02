@@ -11,17 +11,25 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto 1fr;
         }
-        &__button{
+
+        &__button {
             height: 68px;
         }
+
         &__title {
             font-size: 43px;
         }
-        &__subtitle{
+
+        &__subtitle {
             font-size: 16px;
         }
+
         &__illustration {
-          width: 80%;
+            width: 80%;
+        }
+
+        &__list {
+            margin-top: 25px;
         }
     }
 
@@ -110,27 +118,60 @@
             color: #fff;
             border-color: #fff;
         }
+
     }
 
     .promo {
+        padding-bottom: 60px;
+
         &__container {
-            grid-template-columns: 1fr;
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            grid-template-rows: auto auto auto auto;
+            justify-content: center;
         }
 
-        &__subtitle {
-            grid-row: 3/4;
+        picture {
+            display: block;
+            margin: 0 auto;
         }
 
-        &__illustration {
-            grid-row: 2/3;
+        &__title {
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         &__button {
-            grid-row: 4/5;
+            width: 100%;
+            max-width: none;
+
         }
+
+        &__list {
+            flex-wrap: wrap;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__image {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__item {
+            width: 33%;
+        }
+
+        &__illustration {
+            margin: 0 auto;
+        }
+
+        &__button {}
+    }
+
+    .services {
+        &__item {}
     }
 
     .footer {
@@ -222,6 +263,52 @@
         max-width: 720px;
     }
 
+    .services {
+
+        &__list {}
+
+        picture {
+            grid-column: 2/-1;
+            grid-row: 2/-1;
+            justify-self: end;
+            height: 129px;
+            max-width: 165px;
+        }
+
+        &__item {
+            grid-template-columns: auto auto 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            &-title {
+                font-size: 26px;
+            }
+
+            &-image {
+                height: 129px;
+                max-width: 165px;
+            }
+
+            width: 100%;
+
+            &-link {
+                grid-column: 1/2;
+                grid-row: 2/-1;
+                visibility: hidden;
+                justify-self: start;
+
+                &::before {
+                    visibility: visible;
+                }
+            }
+        }
+
+
+
+
+
+
+    }
+
     .footer__container {
         padding: 50px 30px 20px 30px;
     }
@@ -244,6 +331,20 @@
 @media (max-width:576px) {
     .container {
         max-width: 540px;
+    }
+
+    .section__header {
+        flex-direction: column;
+    }
+
+    .promo {
+        &__title {
+            max-width: 390px;
+        }
+
+        &__item {
+            width: 50%;
+        }
     }
 
     .footer {
