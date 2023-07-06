@@ -40,7 +40,7 @@ showMore.addEventListener('click', () => {
 });
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews__swiper', {
     // Optional parameters
     slidesPerView: 2.1,
     spaceBetween: 30,
@@ -75,3 +75,10 @@ navItems.forEach(el => {
         nav.classList.remove('header__menu--visible');
     })
 })
+
+
+const swiperTwo = new Swiper('.case__swiper', {
+    // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+});
