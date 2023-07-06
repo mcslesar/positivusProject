@@ -80,5 +80,6 @@ navItems.forEach(el => {
 const swiperTwo = new Swiper('.case__swiper', {
     // Optional parameters
     slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
 });

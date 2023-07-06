@@ -172,6 +172,7 @@ body {
 .open .process__btn::after {
     background-image: url(../images/minus-icon.svg);
     transition: all 0.2s ease-out;
+    position: relative;
 }
 
 .open .process__text {
