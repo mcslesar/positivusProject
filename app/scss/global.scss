@@ -12,6 +12,12 @@ fieldset {
     padding: 0;
 }
 
+input,
+textarea {
+    width: 100%;
+    display: block;
+}
+
 fieldset {
     border: none;
 }
@@ -53,18 +59,22 @@ body {
     color: #000;
     overflow-x: hidden;
 }
+
 .stop-scrole {
     overflow: hidden;
 }
+
 .wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-.section__header{
+
+.section__header {
     display: flex;
-    gap:40px;
+    gap: 40px;
 }
+
 .main {
     flex-grow: 1;
 }
@@ -94,10 +104,12 @@ body {
     height: 2px;
     background-color: #000;
     transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
-    &:nth-child(2){
+
+    &:nth-child(2) {
         top: 50%;
         transform: translateY(-50%);
     }
+
     &:first-child {
         top: 0;
     }
@@ -106,17 +118,20 @@ body {
         bottom: 0;
     }
 }
-.burger--active .burger__line{
-    &:nth-child(2){
+
+.burger--active .burger__line {
+    &:nth-child(2) {
         opacity: 0;
     }
-    &:first-child{
+
+    &:first-child {
         transform: rotate(45deg);
-        top:50%;
+        top: 50%;
     }
-    &:last-child{
+
+    &:last-child {
         transform: rotate(-45deg);
-        top:50%;
+        top: 50%;
         bottom: auto;
     }
 }
@@ -131,9 +146,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-.small-size{
+
+.small-size {
     display: none;
 }
+
 .section-title {
     color: #000;
     font-size: 40px;
@@ -172,7 +189,6 @@ body {
 .open .process__btn::after {
     background-image: url(../images/minus-icon.svg);
     transition: all 0.2s ease-out;
-    position: relative;
 }
 
 .open .process__text {
@@ -182,17 +198,15 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     margin: 0;
+    top: 84%;
 }
 
 .swiper-button-next:after,
 .swiper-container-rtl {
     content: '';
-    position: absolute;
-    right: 400px;
-    bottom: -60px;
+    display: block;
     background-image: url(../images/arrow-right.svg);
     background-repeat: no-repeat;
     width: 24px;
@@ -201,9 +215,7 @@ body {
 
 .swiper-button-prev:after {
     content: '';
-    position: absolute;
-    left: 400px;
-    bottom: -60px;
+    display: block;
     background-image: url(../images/arrow-left.svg);
     background-repeat: no-repeat;
     width: 24px;
@@ -216,13 +228,12 @@ body {
 }
 
 .swiper-button-prev {
-    float: left;
-    height: 100%;
+    left: 35%;
+
 }
 
 .swiper-button-next {
-    float: right;
-    height: 100%;
+    right: 35%;
 }
 
 .black-window {

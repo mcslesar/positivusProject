@@ -42,7 +42,7 @@ showMore.addEventListener('click', () => {
 
 const swiper = new Swiper('.reviews__swiper', {
     // Optional parameters
-    slidesPerView: 2.1,
+    slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     initialSlide: 2,
@@ -57,6 +57,15 @@ const swiper = new Swiper('.reviews__swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        
+        // when window width is >= 640px
+        1200: {
+        slidesPerView: 2.1,
+          spaceBetween: 30,
+        }
+      }
 });
 
 const burger = document?.querySelector('[data-burger]');
