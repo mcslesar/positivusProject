@@ -31,10 +31,59 @@
         color: #000;
         font-size: 20px;
         line-height: 28px;
+        position: relative;
+        transition: opacity 0.3s ease;
+
+        &:active {
+            opacity: 0.8;
+        }
     }
+
 }
 
+.header__item:not(:last-child) .header__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    /* Высота линии */
+    background-color: black;
+    /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s;
+    /* Время эффекта */
+}
+
+.header__item:not(:last-child) .header__link:hover::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    /* Высота линии */
+    background-color: black;
+    /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;
+    /* Время эффекта */
+}
+
+
+
 .header__button {
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $green;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+
     padding: 20px 35px;
     border: 1px solid $black;
     border-radius: 14px;
@@ -84,7 +133,7 @@
     &__button {
         grid-row: 3/4;
         padding: 20px 35px;
-        max-width: 265px;
+        max-width: 268px;
     }
 
     &__list {
@@ -176,7 +225,13 @@
         align-self: self-end;
         gap: 15px;
         font-size: 20px;
+       
         line-height: 28px;
+        &:hover{
+            &::before{
+                transform: rotate(90deg);
+            }
+        }
     }
 
     &__item-link::before {
@@ -184,6 +239,7 @@
         background-image: url(../images/black-green-icon.svg);
         width: 41px;
         height: 41px;
+        transition: transform 0.3s ease;
     }
 
     &__item-image {
@@ -235,7 +291,21 @@
 
     &__contact-link {
         padding: 20px 35px;
+        color: #fff;
+        border-radius: 25px;
+        background-color: black;
         max-width: 290px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        &:hover{
+            background-color: $green;
+            color: #000;
+        }
+        &:focus{
+            outline: 3px black solid;
+        }
+        &:active{
+            opacity: 0.6;
+        }
     }
 }
 
@@ -246,10 +316,12 @@
 
 .case {
     margin-bottom: 140px;
-    &__swiper{
+
+    &__swiper {
         display: none;
 
     }
+
     &__header {
         margin-bottom: 85px;
     }
@@ -272,6 +344,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 20px;
     }
 
@@ -291,11 +364,17 @@
         color: $green;
         font-size: 20px;
         line-height: 28px;
+        &:hover{
+            text-decoration: underline;
+        }
+        &:hover::after{
+            transform: rotate(90deg);
+        }
     }
 
     &__link::after {
         content: '';
-
+        transition: transform 0.3s ease;
         background-image: url(../images/arrow.svg);
         background-repeat: no-repeat;
         width: 25px;
@@ -330,7 +409,7 @@
         background-color: transparent;
         text-align: left;
         border: none;
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -339,7 +418,7 @@
             background-repeat: no-repeat;
             width: 58px;
             height: 58px;
-            
+
             margin-left: auto;
             transition: all 0.2s ease-out;
         }
@@ -378,7 +457,7 @@
 
     &__item {
         box-sizing: content-box;
-        transition: box-shadow  0.3s ease-in-out;
+        transition: box-shadow 0.3s ease-in-out;
         cursor: pointer;
         padding: 41px 60px;
         background-color: $grey;
@@ -387,14 +466,17 @@
         box-shadow: 0px 5px 0px 0px #191A23;
     }
 }
-.process__item:hover{
+
+.process__item:hover {
     box-shadow: 0px 10px 0px 0px $green;
 }
-.process__btn:focus-visible{
-    outline:2px solid black;
-    outline-offset:5px;
-    
+
+.process__btn:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 5px;
+
 }
+
 .open {
     background-color: $green;
 }
@@ -463,12 +545,33 @@
     }
 
     &__item-link {
-        position: absolute;
-        background-image: url(../images/linkidn-icon.svg);
-        width: 34px;
         height: 34px;
-        top: 0;
-        right: 0;
+        svg{
+            fill: none;
+            circle{
+                transition: fill 0.3s ease;
+            }
+            path{
+                transition: fill 0.3s ease;
+                fill:#B9FF66;
+            }
+        }
+        &:hover{
+            svg{
+                circle{
+                    fill: #B9FF66;
+                }
+                path{
+                    fill:#000;
+                }
+            }
+        }
+        &:focus{
+            outline: #000 solid 3px;
+        }
+        &:active{
+            opacity: 0.6;
+        }
     }
 
     &__button {
@@ -703,7 +806,20 @@
     border-radius: 14px;
     background: #FFF;
 }
-
+.facebook{
+    svg{
+        path{
+           transition: fill 0.4s ease; 
+        }
+    }
+}
+.facebook:hover{
+    svg{
+        path{
+            fill: $green;
+        }
+    }
+}
 .footer {
     &__container {
         color: #fff;
@@ -724,6 +840,7 @@
     }
 
     &__logo {
+        max-width: 150px;
         align-items: center;
         grid-column-start: 1;
         grid-column-end: 2;
@@ -763,8 +880,40 @@
     &__link {
         text-decoration: underline;
         padding-bottom: 1px;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+        &:hover{
+            text-decoration: none;
+            color: $green;
+        }
+        &:focus-visible{
+            outline: #fff solid 2px;
+        }
+        &:active{
+            opacity: 0.6;
+        }
     }
-
+    &__soc-link{
+        svg{
+            circle{
+                transition: fill 0.4s ease;
+            }
+        }
+    
+        &:hover{
+            svg{
+                circle{
+                    fill: #B9FF66;
+                }
+            }
+        }
+        &:focus-visible{
+            outline: #fff solid 2px;
+        }
+        &:active{
+            opacity: 0.6;
+        }
+    }
+   
     &__contact {
         &-title {
             margin-bottom: 27px;
@@ -783,7 +932,18 @@
             gap: 20px;
             width: 332px;
         }
-
+        &-link{
+            &:hover{
+                text-decoration: underline;
+                color: $green;
+            }
+            &:focus-visible{
+                outline: #fff solid 2px;
+            }
+            &:active{
+                opacity: 0.6;
+            }
+        }
     }
 
     &__form {
@@ -814,9 +974,14 @@
         }
 
         &-button {
+            cursor: pointer;
             padding: 20px 35px;
             background: $green;
             border-radius: 14px;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-color: #fff;
+            }
         }
     }
 
@@ -826,6 +991,16 @@
 
         &-link {
             text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+                color: $green;
+            }
+            &:focus-visible{
+                outline: #fff solid 2px;
+            }
+            &:active{
+                opacity: 0.6;
+            }
         }
     }
 }

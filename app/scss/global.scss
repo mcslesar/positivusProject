@@ -137,6 +137,10 @@ body {
 }
 
 .button {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    appearance: none;
     border-radius: 14px;
     background-color: $black;
     color: #FFF;
@@ -144,9 +148,40 @@ body {
     line-height: 28px;
     display: flex;
     align-items: center;
+    border: 1px solid $black;
     justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform .2s ease;
+    
+    span {
+        position: relative;
+        pointer-events: none;
+      }
+    &::before {
+        --size: 0;
+        content: '';
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--size);
+        height: var(--size);
+        background: radial-gradient(circle closest-side, $green, transparent);
+        transform: translate(-50%, -50%);
+        transition: width .2s ease, height .2s ease;
+    }
+
+    &:hover::before {
+        --size: 400px;
+    }
 }
 
+.button:focus{
+    outline: $green 3px solid;
+}
+.button:active{
+    outline: $green 3px solid;
+    opacity: 0.5;
+}
 .small-size {
     display: none;
 }
@@ -210,6 +245,7 @@ body {
     background-image: url(../images/arrow-right.svg);
     background-repeat: no-repeat;
     width: 24px;
+    transition: transform 0.3s ease;
     height: 25px;
 }
 
@@ -218,6 +254,7 @@ body {
     display: block;
     background-image: url(../images/arrow-left.svg);
     background-repeat: no-repeat;
+    transition: transform 0.3s ease;
     width: 24px;
     height: 25px;
 }
@@ -231,7 +268,9 @@ body {
     left: 35%;
 
 }
-
+.swiper-button-prev:hover::after, .swiper-button-next:hover::after{
+    transform: scale(1.1);
+}
 .swiper-button-next {
     right: 35%;
 }

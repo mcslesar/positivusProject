@@ -59,13 +59,13 @@ const swiper = new Swiper('.reviews__swiper', {
     },
     breakpoints: {
         // when window width is >= 320px
-        
+
         // when window width is >= 640px
         1200: {
-        slidesPerView: 2.1,
-          spaceBetween: 30,
+            slidesPerView: 2.1,
+            spaceBetween: 30,
         }
-      }
+    }
 });
 
 const burger = document?.querySelector('[data-burger]');
@@ -92,3 +92,32 @@ const swiperTwo = new Swiper('.case__swiper', {
     spaceBetween: 20,
     loop: true,
 });
+
+document.querySelector('.button').onmousemove = (e) => {
+
+    const x = e.pageX - e.target.offsetLeft
+    const y = e.pageY - e.target.offsetTop
+
+    e.target.style.setProperty('--x', `${x}px`)
+    e.target.style.setProperty('--y', `${y}px`)
+
+}
+document.querySelector('.team__button').onmousemove = (e) => {
+
+    const x = e.pageX - e.target.offsetLeft
+    const y = e.pageY - e.target.offsetTop
+
+    e.target.style.setProperty('--x', `${x}px`)
+    e.target.style.setProperty('--y', `${y}px`)
+
+}
+document.querySelector('.contact__button').onmousemove = (e) => {
+
+    const x = e.pageX - e.target.offsetLeft
+    const y = e.pageY - e.target.offsetTop
+
+    e.target.style.setProperty('--x', `${x}px`)
+    e.target.style.setProperty('--y', `${y}px`)
+
+}
+
