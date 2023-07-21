@@ -19,6 +19,7 @@
 
         &__title {
             font-size: 43px;
+
         }
 
         &__subtitle {
@@ -72,17 +73,20 @@
 
             &-text {
                 align-items: center;
-                
+
             }
         }
-        &__button{
+
+        &__button {
             max-width: none;
         }
-        &__text{
+
+        &__text {
             max-width: none;
         }
     }
-    .label-text{
+
+    .label-text {
         width: 100%;
     }
 }
@@ -190,6 +194,7 @@
         &__title {
             max-width: 700px;
             margin: 0 auto;
+            text-align: center;
         }
 
         &__button {
@@ -267,7 +272,7 @@
         border: 1px solid #000;
         border-radius: 50%;
         background: transparent;
-        
+
     }
 
     .open .process__btn::before {
@@ -309,6 +314,7 @@
 
     .contact {
         margin-bottom: 60px;
+
         &__header {
             margin-bottom: 40px;
         }
@@ -510,7 +516,7 @@
             }
         }
     }
-    
+
 
     .reviews {
         &__swiper {
@@ -557,12 +563,14 @@
             width: 100%;
         }
     }
-    .contact{
-        &__form{
+
+    .contact {
+        &__form {
             padding: 40px 30px;
         }
     }
-    .label-radio{
+
+    .label-radio {
         font-size: 16px;
     }
 }
@@ -580,6 +588,7 @@
     .promo {
         &__title {
             max-width: 390px;
+            font-size: 34px;
         }
 
         &__item {

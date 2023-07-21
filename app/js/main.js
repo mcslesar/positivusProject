@@ -121,3 +121,45 @@ document.querySelector('.contact__button').onmousemove = (e) => {
 
 }
 
+const header = document.querySelector('.header');
+const promo = document.querySelector('.promo');
+const headerHeight = header.offsetHeight;
+const promoHeight = promo.offsetHeight;
+const scrollItems = document.querySelectorAll('.scroll-item')
+
+const headerFixed = () => {
+    let scrollDistance = window.scrollY;
+
+    if (scrollDistance >= promoHeight + headerHeight) {
+        header.classList.add('header--fixed');
+        header.style.paddingTop = '15px'
+        header.style.paddingBottom = '15px'
+        promo.style.marginTop = '100px';
+    } else {
+        header.classList.remove('header--fixed');
+        header.classList.remove('header--fixed-off');
+        promo.style.marginTop = null;
+        header.style.paddingTop = '60px'
+        header.style.paddingBottom = '0px'
+    }
+
+};
+
+const scrollAnimation = () => {
+    let windowCenter = (window.innerHeight / 2) * window.scrollY;
+    scrollItems.forEach(el => {
+        let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('animation-class');
+        } else {
+            el.classList.remove('animation-class');
+        }
+    })
+};
+
+headerFixed();
+scrollAnimation();
+window.addEventListener('scroll', () => {
+    headerFixed();
+    scrollAnimation();
+})

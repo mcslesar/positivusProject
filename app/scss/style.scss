@@ -9,13 +9,14 @@
 .header__container {
     display: flex;
     align-items: center;
+    
     justify-content: space-between;
 }
 
 
 .header {
+    z-index: 5;
     padding-top: 60px;
-
     &__logo {
         margin-right: 10px;
     }
@@ -137,23 +138,30 @@
     }
 
     &__list {
-        margin-top: 70px;
+        margin-top: 64px;
         display: flex;
         justify-content: space-between;
-        height: 48px;
+        height: 56px;
         width: 100%;
         overflow: hidden;
+        padding: 5px 2px;
 
     }
 
     &__item {
         display: inline-block;
 
-
     }
 
     &__link {
         display: block;
+        &:focus{
+            outline: #000 2px solid;
+        }
+        &:active{
+            opacity: 0.6;
+        }
+         
     }
 
     &__image {
@@ -521,6 +529,7 @@
     &__item-wrapper {
         position: relative;
         display: flex;
+        justify-content: space-between;
         gap: 20px;
 
         &::after {
