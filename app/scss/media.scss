@@ -1,3 +1,11 @@
+@media (max-width:1250px) {
+    .footer {
+        &__list:first-of-type {
+            gap: 20px;
+        }
+    }
+}
+
 @media (max-width:1200px) {
     .container {
         overflow: hidden;
@@ -52,6 +60,10 @@
     }
 
     .footer {
+        &__list:first-of-type {
+            gap: 20px;
+        }
+
         &__contact {
             &-list {
                 width: auto;
@@ -192,7 +204,7 @@
         }
 
         &__title {
-            max-width: 700px;
+            max-width: 666px;
             margin: 0 auto;
             text-align: center;
         }
@@ -230,7 +242,9 @@
         &__list {
             margin-bottom: 60px;
         }
-
+        &__item{
+            width: 100%;
+        }
         &__contact {
             margin-bottom: 60px;
         }

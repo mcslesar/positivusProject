@@ -98,15 +98,90 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-.services__item{
+
+.services__item {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.3s ease-in-out,transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.services__item.animation-class{
+
+.services__item:nth-child(odd) {
+    transform: translateX(-50px);
+}
+
+.services__item:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.services__item.element-show {
     opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease-in-out,transform 0.3s ease-in-out;
+    transition: opacity 1s, transform 1s ease;
+    transform: translate(0);
+}
+
+.services__contact.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.services__item:nth-child(odd).element-show {
+    transform: translateX(0);
+}
+
+.services__item:nth-child(even).element-show {
+    transform: translateX(0);
+}
+
+.case__list {
+    opacity: 0;
+}
+
+.case__list.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.process__item {
+    opacity: 0;
+}
+
+.process__item.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.team__item {
+    opacity: 0;
+}
+
+.team__item.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.reviews__swiper {
+    opacity: 0;
+}
+
+.reviews__swiper.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.contact__form {
+    opacity: 0;
+}
+
+.contact__form.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+.footer__container{
+    opacity: 0;
+}
+.footer__container.element-show{
+    opacity: 1;
+    transition: opacity 1s;
 }
 .header__burger {
     position: relative;
