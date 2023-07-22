@@ -476,16 +476,6 @@
     }
 }
 
-.process__item:hover {
-    box-shadow: 0px 10px 0px 0px $green;
-}
-
-.process__btn:focus-visible {
-    outline: 2px solid black;
-    outline-offset: 5px;
-
-}
-
 .open {
     background-color: $green;
 }
