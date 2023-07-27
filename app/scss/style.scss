@@ -15,7 +15,7 @@
 
 
 .header {
-    z-index: 5;
+    z-index: 100;
     padding-top: 60px;
     &__logo {
         margin-right: 10px;
@@ -406,6 +406,8 @@
     }
 
     &__btn {
+        color: #000;
+        appearance: none;
         position: relative;
         padding-left: 0;
         display: flex;
